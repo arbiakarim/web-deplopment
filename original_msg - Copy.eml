@@ -1,0 +1,771 @@
+Delivered-To: arminarbia777@gmail.com
+Received: by 2002:a05:7022:f92:b0:9c:9b79:58f7 with SMTP id eg18csp2460563dlb;
+        Mon, 2 Jun 2025 00:19:33 -0700 (PDT)
+X-Received: by 2002:a05:6808:7004:b0:406:7769:d351 with SMTP id 5614622812f47-4067e6a134dmr6960708b6e.23.1748848773317;
+        Mon, 02 Jun 2025 00:19:33 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1748848773; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Vfa/VlnxW1DEg3EBIosQQsRvAQc1yvavTRdWl4tZPsry35n1TgNdntzbXlfexGyPM8
+         0Vh6FJkQCI3Tw0fRB7ATHBL/tudNwgHzQVfStWdbgNzIpYlrelbKIbA+nMxZrhIh3lId
+         7kRmY2SaAGf5Vi2+xDzYXdMqv83dofeK2srO6pQiqj9eMMDfEbLCnUfetcQcYKRWyWMt
+         Wjeeyfk8xl6WGFzO2kZy1rurMipYjF+cC3gk3wPLbMdU8awGV8ZBRLj6/weaHJfOnoOR
+         6R79wQ39I4LNhSWsnb1WIlT5j+f7WVMgfjTVs6UKyCvjJS5kG+CUJsPvZRIn+L3F6ggS
+         ykhw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=mAZ27rCvbt7oJFbj899v/NqkVmpkwrnzdR7M1ALNouI=;
+        fh=w80TCBdpsrUnydT/b/Ef9hsDVYkk7n/6EttPsAC0qeg=;
+        b=Nnl2Qs5lJ0ENn/bLzXcgFUbJytk1z1eNsF9E60bvkpIkCPlsMcGHDmU5cJMALhcj2+
+         Ljk8XbCS0TCV/YNxJgaH7gO72fDVz0XfSpJWn/CcsTHFgHEjPaO6snYQ5sK2dEx1ju7m
+         AycrRFZLNDeUZaT/x3YKydzglFaI4ntHNFvplddPiix3q9QLvLbtKXECG83nlhYgkrbM
+         kEB7NZ6gNGUqd/ebPauIaSbvrCt7iF0CNxs5x1kYMsX7eqdPBHjLJY2k3cY2wIXIwCku
+         +3kkWiI67V7W9FxpEwRmsNC5VAGdrw/PcV2NJ8hqAsIU8jccrQbCA9Tv68HnIZt1UDev
+         sB0g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=DRnU1ghZ;
+       spf=pass (google.com: domain of arbiakarim2004@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=arbiakarim2004@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <arbiakarim2004@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 5614622812f47-4067a932312sor750277b6e.15.2025.06.02.00.19.33
+        for <arminarbia777@gmail.com>
+        (Google Transport Security);
+        Mon, 02 Jun 2025 00:19:33 -0700 (PDT)
+Received-SPF: pass (google.com: domain of arbiakarim2004@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=DRnU1ghZ;
+       spf=pass (google.com: domain of arbiakarim2004@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=arbiakarim2004@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1748848773; x=1749453573; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=mAZ27rCvbt7oJFbj899v/NqkVmpkwrnzdR7M1ALNouI=;
+        b=DRnU1ghZbMhl3hL6r45I72OtxXAWBDvqNB2DbGTN0MjYgz2L6Ma5BZ/QEj3BAa1lFa
+         WojI6aRUAq6d3rWG1Ao1lTWv6ZSk4nPFtacVsKSNZ3wRLVHFfYtocakxgx/MFzm2Hqti
+         Wcju64w4t941tjkAYgdzFL0MeDDjYMQ2ewa1jC7WE8/Oe1YBN+fBCr6zWkCx7XL8gQbK
+         vSOh986ohv07V0wrX2umYm8Q+qgwibyr1Gcn9myAiwLFZ3zJZTAEgPs4Lz3IjNygOQu5
+         APzZ17C+OUYmcZ8Gq7VZ/Ei6LBYCEZS3r4S7bwW9ZGyArP9INUIBg9TuTCKNPggCYL6c
+         yWug==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1748848773; x=1749453573;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=mAZ27rCvbt7oJFbj899v/NqkVmpkwrnzdR7M1ALNouI=;
+        b=Z3Oanfu0fOq8Jg9uSQhJx+N/5NJW9CvvNDb6Sh+zzjjEMHQYy/zHpdk1m3OTFZ9Red
+         nnc2wYQKSGKivpaTjdGYyrV2kQxP0r70L0/B2gYJAvB3felM2DgR6OwqCshgayLYNEI+
+         Qrqo8rmI4EOqkdlbJjRm10rWFgHisjs22ySWnkDul2C/tqHExkVpLIn7mEg2JMJkuUQj
+         i+rYdZKdokS2nVTfSsMXVz+jn8l6ls/t6rCpVe2Mrwd9UHSKRNlSvGXkCN4xsf7yonsu
+         yb23IxFpzzKrG9O8HN25tEicgSqJydCZS8BgVZg7fL5ZtX04lvKmP+Su35Sm7cOd4n+0
+         hgEA==
+X-Gm-Message-State: AOJu0Yy45YHap1ZjLSCtvTblGcVmsODvsaSmoZ/RZSP5M4rrTEF52XdU
+	9NzQ3nMj1Q1s5dT6Whgdwb9vKDWKuTv+1jF+oI820Yi87QJIHAr914Rwlp1Z+3hYcj3n/gRbTLM
+	s1ZSYk13jeGE+5Y7boaJJmJcTKvmNn4hwlpcJqmM=
+X-Gm-Gg: ASbGnctDUs43qr+Pv/+GuOgXqhgf9Iw+0JhmhdPrtLu7w3YsdBAnkYhGDW8uZPFlYK3
+	CoVwpXscHRPHasT106u/hnX8y/GgebvV31fRX1bas1r3lr7t0aIN2EEnWWE2M6FCu5KsHHH207V
+	rNSBMqmK2qcDKl4M6q1A2nzwQ3jMBR5YOdOtMKKHrzFKHO
+X-Google-Smtp-Source: AGHT+IH9m9eTvNTqFhxeomXdcNCpPQYPIJvODiVPysidruElZcS0olLz3Y3WcEMLi73ZyB3AnmslpgmMJoVQjfs7YcE=
+X-Received: by 2002:a05:6808:4c5:b0:403:25bd:ca71 with SMTP id
+ 5614622812f47-4067e550061mr4785828b6e.15.1748848772511; Mon, 02 Jun 2025
+ 00:19:32 -0700 (PDT)
+MIME-Version: 1.0
+From: Arbia Karim <arbiakarim2004@gmail.com>
+Date: Mon, 2 Jun 2025 13:19:20 +0600
+X-Gm-Features: AX0GCFsyA1Nb65aYnc3oTC4jxJNBX6SmDpGHUciFM0WSQrFqDcetSvOaXjo05Js
+Message-ID: <CAJDxNAi5GqoWMKbtC_ANsbXLcqyHR=ies4jw=SjcbFxDaPjwFQ@mail.gmail.com>
+Subject: 
+To: "arminarbia777@gmail.com" <arminarbia777@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000d9fdfc0636919584"
+
+--000000000000d9fdfc0636919584
+Content-Type: text/plain; charset="UTF-8"
+
+Task 1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Navigation Menu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navigation styles */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: transparent;
+      padding: 15px 30px;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar.scrolled {
+      background-color: #333;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ffcc00;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* Dummy content to scroll */
+    .content {
+      margin-top: 80px;
+      padding: 20px;
+      height: 2000px;
+      background: linear-gradient(#f0f0f0, #ccc);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="logo"><a href="#">MySite</a></div>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <div class="content">
+    <h1>Welcome to My Website</h1>
+    <p>Scroll down to see the navigation bar change color.</p>
+  </div>
+
+  <script>
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+Task 2
+Task 2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stopwatch App</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #282c34;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+      margin: 0;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .stopwatch {
+      background: #3b3f47;
+      border-radius: 10px;
+      padding: 30px 50px;
+      box-shadow: 0 0 20px #61dafb88;
+      text-align: center;
+      width: 320px;
+    }
+
+    #time {
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #61dafb;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      color: #282c34;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+
+    button:hover {
+      background-color: #21a1f1;
+      color: #fff;
+    }
+
+    button:disabled {
+      background-color: #7f8a9d;
+      cursor: not-allowed;
+      color: #ccc;
+    }
+
+    .laps {
+      max-height: 180px;
+      overflow-y: auto;
+      background: #22252a;
+      border-radius: 6px;
+      padding: 15px;
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    .laps p {
+      margin: 5px 0;
+      border-bottom: 1px solid #444;
+      padding-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Stopwatch</h1>
+
+  <div class="stopwatch">
+    <div id="time">00:00:00.000</div>
+
+    <div class="buttons">
+      <button id="startBtn">Start</button>
+      <button id="pauseBtn" disabled>Pause</button>
+      <button id="resetBtn" disabled>Reset</button>
+      <button id="lapBtn" disabled>Lap</button>
+    </div>
+
+    <div class="laps" id="lapsContainer">
+      <!-- Lap times will appear here -->
+    </div>
+  </div>
+
+  <script>
+    const timeDisplay = document.getElementById("time");
+    const startBtn = document.getElementById("startBtn");
+    const pauseBtn = document.getElementById("pauseBtn");
+    const resetBtn = document.getElementById("resetBtn");
+    const lapBtn = document.getElementById("lapBtn");
+    const lapsContainer = document.getElementById("lapsContainer");
+
+    let startTime = 0;
+    let elapsedTime = 0;
+    let timerInterval;
+    let running = false;
+
+    function timeToString(time) {
+      const diffInHrs = time / 3600000;
+      const hh = Math.floor(diffInHrs);
+
+      const diffInMin = (diffInHrs - hh) * 60;
+      const mm = Math.floor(diffInMin);
+
+      const diffInSec = (diffInMin - mm) * 60;
+      const ss = Math.floor(diffInSec);
+
+      const diffInMs = (diffInSec - ss) * 1000;
+      const ms = Math.floor(diffInMs);
+
+      const formattedHH = hh.toString().padStart(2, "0");
+      const formattedMM = mm.toString().padStart(2, "0");
+      const formattedSS = ss.toString().padStart(2, "0");
+      const formattedMS = ms.toString().padStart(3, "0");
+
+      return `${formattedHH}:${formattedMM}:${formattedSS}.${formattedMS}`;
+    }
+
+    function print(txt) {
+      timeDisplay.innerHTML = txt;
+    }
+
+    function start() {
+      if (!running) {
+        startTime = Date.now() - elapsedTime;
+        timerInterval = setInterval(() => {
+          elapsedTime = Date.now() - startTime;
+          print(timeToString(elapsedTime));
+        }, 10);
+
+        running = true;
+        startBtn.disabled = true;
+        pauseBtn.disabled = false;
+        resetBtn.disabled = false;
+        lapBtn.disabled = false;
+      }
+    }
+
+    function pause() {
+      if (running) {
+        clearInterval(timerInterval);
+        running = false;
+        startBtn.disabled = false;
+        pauseBtn.disabled = true;
+        resetBtn.disabled = false;
+        lapBtn.disabled = true;
+      }
+    }
+
+    function reset() {
+      clearInterval(timerInterval);
+      print("00:00:00.000");
+      elapsedTime = 0;
+      running = false;
+      lapsContainer.innerHTML = "";
+
+      startBtn.disabled = false;
+      pauseBtn.disabled = true;
+      resetBtn.disabled = true;
+      lapBtn.disabled = true;
+    }
+
+    function lap() {
+      if (running) {
+        const lapTime = timeToString(elapsedTime);
+        const p = document.createElement("p");
+        p.textContent = `Lap: ${lapTime}`;
+        lapsContainer.appendChild(p);
+        lapsContainer.scrollTop = lapsContainer.scrollHeight;
+      }
+    }
+
+    startBtn.addEventListener("click", start);
+    pauseBtn.addEventListener("click", pause);
+    resetBtn.addEventListener("click", reset);
+    lapBtn.addEventListener("click", lap);
+  </script>
+
+</body>
+</html>
+
+Task 3
+Task 3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tic-Tac-Toe Game</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    background: #f0f8ff;
+  }
+  h1 {
+    margin-bottom: 20px;
+  }
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+  }
+  .cell {
+    background: #eee;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .cell:hover {
+    background-color: #d1e7f9;
+  }
+  .status {
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<h1>Tic-Tac-Toe</h1>
+<div class="board" id="board">
+  <div class="cell" data-index="0"></div>
+  <div class="cell" data-index="1"></div>
+  <div class="cell" data-index="2"></div>
+  <div class="cell" data-index="3"></div>
+  <div class="cell" data-index="4"></div>
+  <div class="cell" data-index="5"></div>
+  <div class="cell" data-index="6"></div>
+  <div class="cell" data-index="7"></div>
+  <div class="cell" data-index="8"></div>
+</div>
+
+<div class="status" id="status">Player X's turn</div>
+<button id="resetBtn">Restart Game</button>
+
+<script>
+  const board = document.getElementById('board');
+  const cells = board.querySelectorAll('.cell');
+  const status = document.getElementById('status');
+  const resetBtn = document.getElementById('resetBtn');
+
+  let currentPlayer = 'X';
+  let gameState = ["", "", "", "", "", "", "", "", ""];
+  let gameActive = true;
+
+--000000000000d9fdfc0636919584
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Task 1=C2=A0<div dir=3D"auto"><div dir=3D"auto">&lt;!DOCT=
+YPE html&gt;</div><div dir=3D"auto">&lt;html lang=3D&quot;en&quot;&gt;</div=
+><div dir=3D"auto">&lt;head&gt;</div><div dir=3D"auto">=C2=A0 &lt;meta char=
+set=3D&quot;UTF-8&quot;&gt;</div><div dir=3D"auto">=C2=A0 &lt;meta name=3D&=
+quot;viewport&quot; content=3D&quot;width=3Ddevice-width, initial-scale=3D1=
+.0&quot;&gt;</div><div dir=3D"auto">=C2=A0 &lt;title&gt;Interactive Navigat=
+ion Menu&lt;/title&gt;</div><div dir=3D"auto">=C2=A0 &lt;style&gt;</div><di=
+v dir=3D"auto">=C2=A0 =C2=A0 body {</div><div dir=3D"auto">=C2=A0 =C2=A0 =
+=C2=A0 margin: 0;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 font-family: =
+Arial, sans-serif;</div><div dir=3D"auto">=C2=A0 =C2=A0 }</div><div dir=3D"=
+auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 /* Navigation styles */</di=
+v><div dir=3D"auto">=C2=A0 =C2=A0 .navbar {</div><div dir=3D"auto">=C2=A0 =
+=C2=A0 =C2=A0 position: fixed;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =
+top: 0;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 width: 100%;</div><div =
+dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 background-color: transparent;</div><div =
+dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 padding: 15px 30px;</div><div dir=3D"auto=
+">=C2=A0 =C2=A0 =C2=A0 transition: background-color 0.3s ease;</div><div di=
+r=3D"auto">=C2=A0 =C2=A0 =C2=A0 z-index: 1000;</div><div dir=3D"auto">=C2=
+=A0 =C2=A0 =C2=A0 display: flex;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=
+=A0 justify-content: space-between;</div><div dir=3D"auto">=C2=A0 =C2=A0 =
+=C2=A0 align-items: center;</div><div dir=3D"auto">=C2=A0 =C2=A0 }</div><di=
+v dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 .navbar.scrolled {=
+</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 background-color: #333;</div><=
+div dir=3D"auto">=C2=A0 =C2=A0 }</div><div dir=3D"auto"><br></div><div dir=
+=3D"auto">=C2=A0 =C2=A0 .navbar a {</div><div dir=3D"auto">=C2=A0 =C2=A0 =
+=C2=A0 color: white;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 text-decor=
+ation: none;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 margin: 0 15px;</d=
+iv><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 font-weight: bold;</div><div dir=
+=3D"auto">=C2=A0 =C2=A0 =C2=A0 transition: color 0.3s;</div><div dir=3D"aut=
+o">=C2=A0 =C2=A0 }</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=
+=A0 =C2=A0 .navbar a:hover {</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 co=
+lor: #ffcc00;</div><div dir=3D"auto">=C2=A0 =C2=A0 }</div><div dir=3D"auto"=
+><br></div><div dir=3D"auto">=C2=A0 =C2=A0 .menu {</div><div dir=3D"auto">=
+=C2=A0 =C2=A0 =C2=A0 display: flex;</div><div dir=3D"auto">=C2=A0 =C2=A0 =
+=C2=A0 gap: 20px;</div><div dir=3D"auto">=C2=A0 =C2=A0 }</div><div dir=3D"a=
+uto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 /* Dummy content to scroll *=
+/</div><div dir=3D"auto">=C2=A0 =C2=A0 .content {</div><div dir=3D"auto">=
+=C2=A0 =C2=A0 =C2=A0 margin-top: 80px;</div><div dir=3D"auto">=C2=A0 =C2=A0=
+ =C2=A0 padding: 20px;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 height: =
+2000px;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 background: linear-grad=
+ient(#f0f0f0, #ccc);</div><div dir=3D"auto">=C2=A0 =C2=A0 }</div><div dir=
+=3D"auto">=C2=A0 &lt;/style&gt;</div><div dir=3D"auto">&lt;/head&gt;</div><=
+div dir=3D"auto">&lt;body&gt;</div><div dir=3D"auto"><br></div><div dir=3D"=
+auto">=C2=A0 &lt;nav class=3D&quot;navbar&quot; id=3D&quot;navbar&quot;&gt;=
+</div><div dir=3D"auto">=C2=A0 =C2=A0 &lt;div class=3D&quot;logo&quot;&gt;&=
+lt;a href=3D&quot;#&quot;&gt;MySite&lt;/a&gt;&lt;/div&gt;</div><div dir=3D"=
+auto">=C2=A0 =C2=A0 &lt;div class=3D&quot;menu&quot;&gt;</div><div dir=3D"a=
+uto">=C2=A0 =C2=A0 =C2=A0 &lt;a href=3D&quot;#&quot;&gt;Home&lt;/a&gt;</div=
+><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 &lt;a href=3D&quot;#&quot;&gt;About=
+&lt;/a&gt;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 &lt;a href=3D&quot;#=
+&quot;&gt;Services&lt;/a&gt;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 &l=
+t;a href=3D&quot;#&quot;&gt;Contact&lt;/a&gt;</div><div dir=3D"auto">=C2=A0=
+ =C2=A0 &lt;/div&gt;</div><div dir=3D"auto">=C2=A0 &lt;/nav&gt;</div><div d=
+ir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 &lt;div class=3D&quot;conten=
+t&quot;&gt;</div><div dir=3D"auto">=C2=A0 =C2=A0 &lt;h1&gt;Welcome to My We=
+bsite&lt;/h1&gt;</div><div dir=3D"auto">=C2=A0 =C2=A0 &lt;p&gt;Scroll down =
+to see the navigation bar change color.&lt;/p&gt;</div><div dir=3D"auto">=
+=C2=A0 &lt;/div&gt;</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=
+=A0 &lt;script&gt;</div><div dir=3D"auto">=C2=A0 =C2=A0 const navbar =3D do=
+cument.getElementById(&quot;navbar&quot;);</div><div dir=3D"auto"><br></div=
+><div dir=3D"auto">=C2=A0 =C2=A0 window.addEventListener(&quot;scroll&quot;=
+, () =3D&gt; {</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 if (window.scrol=
+lY &gt; 50) {</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 navbar.cla=
+ssList.add(&quot;scrolled&quot;);</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=
+=A0 } else {</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 navbar.clas=
+sList.remove(&quot;scrolled&quot;);</div><div dir=3D"auto">=C2=A0 =C2=A0 =
+=C2=A0 }</div><div dir=3D"auto">=C2=A0 =C2=A0 });</div><div dir=3D"auto">=
+=C2=A0 &lt;/script&gt;</div><div dir=3D"auto"><br></div><div dir=3D"auto">&=
+lt;/body&gt;</div><div dir=3D"auto">&lt;/html&gt;</div><div dir=3D"auto">=
+=C2=A0=C2=A0</div><div dir=3D"auto">Task 2</div><div dir=3D"auto"><div dir=
+=3D"auto">Task 2</div><div dir=3D"auto">&lt;!DOCTYPE html&gt;</div><div dir=
+=3D"auto">&lt;html lang=3D&quot;en&quot;&gt;</div><div dir=3D"auto">&lt;hea=
+d&gt;</div><div dir=3D"auto">=C2=A0 &lt;meta charset=3D&quot;UTF-8&quot; /&=
+gt;</div><div dir=3D"auto">=C2=A0 &lt;meta name=3D&quot;viewport&quot; cont=
+ent=3D&quot;width=3Ddevice-width, initial-scale=3D1&quot; /&gt;</div><div d=
+ir=3D"auto">=C2=A0 &lt;title&gt;Stopwatch App&lt;/title&gt;</div><div dir=
+=3D"auto">=C2=A0 &lt;style&gt;</div><div dir=3D"auto">=C2=A0 =C2=A0 body {<=
+/div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 font-family: &#39;Segoe UI&#39;=
+, Tahoma, Geneva, Verdana, sans-serif;</div><div dir=3D"auto">=C2=A0 =C2=A0=
+ =C2=A0 background: #282c34;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 co=
+lor: #fff;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 display: flex;</div>=
+<div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 flex-direction: column;</div><div di=
+r=3D"auto">=C2=A0 =C2=A0 =C2=A0 align-items: center;</div><div dir=3D"auto"=
+>=C2=A0 =C2=A0 =C2=A0 justify-content: flex-start;</div><div dir=3D"auto">=
+=C2=A0 =C2=A0 =C2=A0 min-height: 100vh;</div><div dir=3D"auto">=C2=A0 =C2=
+=A0 =C2=A0 padding: 40px 20px;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =
+margin: 0;</div><div dir=3D"auto">=C2=A0 =C2=A0 }</div><div dir=3D"auto"><b=
+r></div><div dir=3D"auto">=C2=A0 =C2=A0 h1 {</div><div dir=3D"auto">=C2=A0 =
+=C2=A0 =C2=A0 margin-bottom: 20px;</div><div dir=3D"auto">=C2=A0 =C2=A0 }</=
+div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 .stopwatch =
+{</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 background: #3b3f47;</div><di=
+v dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 border-radius: 10px;</div><div dir=3D"a=
+uto">=C2=A0 =C2=A0 =C2=A0 padding: 30px 50px;</div><div dir=3D"auto">=C2=A0=
+ =C2=A0 =C2=A0 box-shadow: 0 0 20px #61dafb88;</div><div dir=3D"auto">=C2=
+=A0 =C2=A0 =C2=A0 text-align: center;</div><div dir=3D"auto">=C2=A0 =C2=A0 =
+=C2=A0 width: 320px;</div><div dir=3D"auto">=C2=A0 =C2=A0 }</div><div dir=
+=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 #time {</div><div dir=
+=3D"auto">=C2=A0 =C2=A0 =C2=A0 font-size: 3rem;</div><div dir=3D"auto">=C2=
+=A0 =C2=A0 =C2=A0 font-weight: bold;</div><div dir=3D"auto">=C2=A0 =C2=A0 =
+=C2=A0 letter-spacing: 0.1em;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 m=
+argin-bottom: 20px;</div><div dir=3D"auto">=C2=A0 =C2=A0 }</div><div dir=3D=
+"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 .buttons {</div><div dir=
+=3D"auto">=C2=A0 =C2=A0 =C2=A0 display: flex;</div><div dir=3D"auto">=C2=A0=
+ =C2=A0 =C2=A0 justify-content: center;</div><div dir=3D"auto">=C2=A0 =C2=
+=A0 =C2=A0 gap: 15px;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 margin-bo=
+ttom: 20px;</div><div dir=3D"auto">=C2=A0 =C2=A0 }</div><div dir=3D"auto"><=
+br></div><div dir=3D"auto">=C2=A0 =C2=A0 button {</div><div dir=3D"auto">=
+=C2=A0 =C2=A0 =C2=A0 background-color: #61dafb;</div><div dir=3D"auto">=C2=
+=A0 =C2=A0 =C2=A0 border: none;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0=
+ padding: 12px 25px;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 font-size:=
+ 1rem;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 font-weight: 600;</div><=
+div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 border-radius: 6px;</div><div dir=3D"=
+auto">=C2=A0 =C2=A0 =C2=A0 cursor: pointer;</div><div dir=3D"auto">=C2=A0 =
+=C2=A0 =C2=A0 color: #282c34;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 t=
+ransition: background-color 0.3s ease;</div><div dir=3D"auto">=C2=A0 =C2=A0=
+ =C2=A0 user-select: none;</div><div dir=3D"auto">=C2=A0 =C2=A0 }</div><div=
+ dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 button:hover {</div=
+><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 background-color: #21a1f1;</div><di=
+v dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 color: #fff;</div><div dir=3D"auto">=C2=
+=A0 =C2=A0 }</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=
+=A0 button:disabled {</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 backgroun=
+d-color: #7f8a9d;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 cursor: not-a=
+llowed;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 color: #ccc;</div><div =
+dir=3D"auto">=C2=A0 =C2=A0 }</div><div dir=3D"auto"><br></div><div dir=3D"a=
+uto">=C2=A0 =C2=A0 .laps {</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 max-=
+height: 180px;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 overflow-y: auto=
+;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 background: #22252a;</div><di=
+v dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 border-radius: 6px;</div><div dir=3D"au=
+to">=C2=A0 =C2=A0 =C2=A0 padding: 15px;</div><div dir=3D"auto">=C2=A0 =C2=
+=A0 =C2=A0 font-size: 1rem;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 tex=
+t-align: left;</div><div dir=3D"auto">=C2=A0 =C2=A0 }</div><div dir=3D"auto=
+"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 .laps p {</div><div dir=3D"auto=
+">=C2=A0 =C2=A0 =C2=A0 margin: 5px 0;</div><div dir=3D"auto">=C2=A0 =C2=A0 =
+=C2=A0 border-bottom: 1px solid #444;</div><div dir=3D"auto">=C2=A0 =C2=A0 =
+=C2=A0 padding-bottom: 4px;</div><div dir=3D"auto">=C2=A0 =C2=A0 }</div><di=
+v dir=3D"auto">=C2=A0 &lt;/style&gt;</div><div dir=3D"auto">&lt;/head&gt;</=
+div><div dir=3D"auto">&lt;body&gt;</div><div dir=3D"auto"><br></div><div di=
+r=3D"auto">=C2=A0 &lt;h1&gt;Stopwatch&lt;/h1&gt;</div><div dir=3D"auto"><br=
+></div><div dir=3D"auto">=C2=A0 &lt;div class=3D&quot;stopwatch&quot;&gt;</=
+div><div dir=3D"auto">=C2=A0 =C2=A0 &lt;div id=3D&quot;time&quot;&gt;00:00:=
+00.000&lt;/div&gt;</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=
+=A0 =C2=A0 &lt;div class=3D&quot;buttons&quot;&gt;</div><div dir=3D"auto">=
+=C2=A0 =C2=A0 =C2=A0 &lt;button id=3D&quot;startBtn&quot;&gt;Start&lt;/butt=
+on&gt;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 &lt;button id=3D&quot;pa=
+useBtn&quot; disabled&gt;Pause&lt;/button&gt;</div><div dir=3D"auto">=C2=A0=
+ =C2=A0 =C2=A0 &lt;button id=3D&quot;resetBtn&quot; disabled&gt;Reset&lt;/b=
+utton&gt;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 &lt;button id=3D&quot=
+;lapBtn&quot; disabled&gt;Lap&lt;/button&gt;</div><div dir=3D"auto">=C2=A0 =
+=C2=A0 &lt;/div&gt;</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=
+=A0 =C2=A0 &lt;div class=3D&quot;laps&quot; id=3D&quot;lapsContainer&quot;&=
+gt;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 &lt;!-- Lap times will appe=
+ar here --&gt;</div><div dir=3D"auto">=C2=A0 =C2=A0 &lt;/div&gt;</div><div =
+dir=3D"auto">=C2=A0 &lt;/div&gt;</div><div dir=3D"auto"><br></div><div dir=
+=3D"auto">=C2=A0 &lt;script&gt;</div><div dir=3D"auto">=C2=A0 =C2=A0 const =
+timeDisplay =3D document.getElementById(&quot;time&quot;);</div><div dir=3D=
+"auto">=C2=A0 =C2=A0 const startBtn =3D document.getElementById(&quot;start=
+Btn&quot;);</div><div dir=3D"auto">=C2=A0 =C2=A0 const pauseBtn =3D documen=
+t.getElementById(&quot;pauseBtn&quot;);</div><div dir=3D"auto">=C2=A0 =C2=
+=A0 const resetBtn =3D document.getElementById(&quot;resetBtn&quot;);</div>=
+<div dir=3D"auto">=C2=A0 =C2=A0 const lapBtn =3D document.getElementById(&q=
+uot;lapBtn&quot;);</div><div dir=3D"auto">=C2=A0 =C2=A0 const lapsContainer=
+ =3D document.getElementById(&quot;lapsContainer&quot;);</div><div dir=3D"a=
+uto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 let startTime =3D 0;</div><d=
+iv dir=3D"auto">=C2=A0 =C2=A0 let elapsedTime =3D 0;</div><div dir=3D"auto"=
+>=C2=A0 =C2=A0 let timerInterval;</div><div dir=3D"auto">=C2=A0 =C2=A0 let =
+running =3D false;</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=
+=A0 =C2=A0 function timeToString(time) {</div><div dir=3D"auto">=C2=A0 =C2=
+=A0 =C2=A0 const diffInHrs =3D time / 3600000;</div><div dir=3D"auto">=C2=
+=A0 =C2=A0 =C2=A0 const hh =3D Math.floor(diffInHrs);</div><div dir=3D"auto=
+"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 const diffInMin =3D (dif=
+fInHrs - hh) * 60;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 const mm =3D=
+ Math.floor(diffInMin);</div><div dir=3D"auto"><br></div><div dir=3D"auto">=
+=C2=A0 =C2=A0 =C2=A0 const diffInSec =3D (diffInMin - mm) * 60;</div><div d=
+ir=3D"auto">=C2=A0 =C2=A0 =C2=A0 const ss =3D Math.floor(diffInSec);</div><=
+div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 const dif=
+fInMs =3D (diffInSec - ss) * 1000;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=
+=A0 const ms =3D Math.floor(diffInMs);</div><div dir=3D"auto"><br></div><di=
+v dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 const formattedHH =3D hh.toString().pad=
+Start(2, &quot;0&quot;);</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 const =
+formattedMM =3D mm.toString().padStart(2, &quot;0&quot;);</div><div dir=3D"=
+auto">=C2=A0 =C2=A0 =C2=A0 const formattedSS =3D ss.toString().padStart(2, =
+&quot;0&quot;);</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 const formatted=
+MS =3D ms.toString().padStart(3, &quot;0&quot;);</div><div dir=3D"auto"><br=
+></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 return `${formattedHH}:${form=
+attedMM}:${formattedSS}.${formattedMS}`;</div><div dir=3D"auto">=C2=A0 =C2=
+=A0 }</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 func=
+tion print(txt) {</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 timeDisplay.i=
+nnerHTML =3D txt;</div><div dir=3D"auto">=C2=A0 =C2=A0 }</div><div dir=3D"a=
+uto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 function start() {</div><div=
+ dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 if (!running) {</div><div dir=3D"auto">=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 startTime =3D Date.now() - elapsedTime;</div><d=
+iv dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 timerInterval =3D setInterval((=
+) =3D&gt; {</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 elaps=
+edTime =3D Date.now() - startTime;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 print(timeToString(elapsedTime));</div><div dir=3D"auto">=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 }, 10);</div><div dir=3D"auto"><br></div><div d=
+ir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 running =3D true;</div><div dir=3D"=
+auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 startBtn.disabled =3D true;</div><div dir=
+=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 pauseBtn.disabled =3D false;</div><di=
+v dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 resetBtn.disabled =3D false;</di=
+v><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 lapBtn.disabled =3D false;<=
+/div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 }</div><div dir=3D"auto">=C2=A0=
+ =C2=A0 }</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =
+function pause() {</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 if (running)=
+ {</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 clearInterval(timerIn=
+terval);</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 running =3D fal=
+se;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 startBtn.disabled =
+=3D false;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 pauseBtn.disa=
+bled =3D true;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 resetBtn.=
+disabled =3D false;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 lapB=
+tn.disabled =3D true;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 }</div><d=
+iv dir=3D"auto">=C2=A0 =C2=A0 }</div><div dir=3D"auto"><br></div><div dir=
+=3D"auto">=C2=A0 =C2=A0 function reset() {</div><div dir=3D"auto">=C2=A0 =
+=C2=A0 =C2=A0 clearInterval(timerInterval);</div><div dir=3D"auto">=C2=A0 =
+=C2=A0 =C2=A0 print(&quot;00:00:00.000&quot;);</div><div dir=3D"auto">=C2=
+=A0 =C2=A0 =C2=A0 elapsedTime =3D 0;</div><div dir=3D"auto">=C2=A0 =C2=A0 =
+=C2=A0 running =3D false;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 lapsC=
+ontainer.innerHTML =3D &quot;&quot;;</div><div dir=3D"auto"><br></div><div =
+dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 startBtn.disabled =3D false;</div><div di=
+r=3D"auto">=C2=A0 =C2=A0 =C2=A0 pauseBtn.disabled =3D true;</div><div dir=
+=3D"auto">=C2=A0 =C2=A0 =C2=A0 resetBtn.disabled =3D true;</div><div dir=3D=
+"auto">=C2=A0 =C2=A0 =C2=A0 lapBtn.disabled =3D true;</div><div dir=3D"auto=
+">=C2=A0 =C2=A0 }</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0=
+ =C2=A0 function lap() {</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 if (ru=
+nning) {</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 const lapTime =
+=3D timeToString(elapsedTime);</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 const p =3D document.createElement(&quot;p&quot;);</div><div dir=3D"=
+auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 p.textContent =3D `Lap: ${lapTime}`;</div=
+><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 lapsContainer.appendChild(p)=
+;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 lapsContainer.scrollTo=
+p =3D lapsContainer.scrollHeight;</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=
+=A0 }</div><div dir=3D"auto">=C2=A0 =C2=A0 }</div><div dir=3D"auto"><br></d=
+iv><div dir=3D"auto">=C2=A0 =C2=A0 startBtn.addEventListener(&quot;click&qu=
+ot;, start);</div><div dir=3D"auto">=C2=A0 =C2=A0 pauseBtn.addEventListener=
+(&quot;click&quot;, pause);</div><div dir=3D"auto">=C2=A0 =C2=A0 resetBtn.a=
+ddEventListener(&quot;click&quot;, reset);</div><div dir=3D"auto">=C2=A0 =
+=C2=A0 lapBtn.addEventListener(&quot;click&quot;, lap);</div><div dir=3D"au=
+to">=C2=A0 &lt;/script&gt;</div><div dir=3D"auto"><br></div><div dir=3D"aut=
+o">&lt;/body&gt;</div><div dir=3D"auto">&lt;/html&gt;</div><div dir=3D"auto=
+"><br></div><div dir=3D"auto">Task 3</div><div dir=3D"auto"><div dir=3D"aut=
+o">Task 3</div><div dir=3D"auto">&lt;!DOCTYPE html&gt;</div><div dir=3D"aut=
+o">&lt;html lang=3D&quot;en&quot;&gt;</div><div dir=3D"auto">&lt;head&gt;</=
+div><div dir=3D"auto">&lt;meta charset=3D&quot;UTF-8&quot; /&gt;</div><div =
+dir=3D"auto">&lt;meta name=3D&quot;viewport&quot; content=3D&quot;width=3Dd=
+evice-width, initial-scale=3D1&quot; /&gt;</div><div dir=3D"auto">&lt;title=
+&gt;Tic-Tac-Toe Game&lt;/title&gt;</div><div dir=3D"auto">&lt;style&gt;</di=
+v><div dir=3D"auto">=C2=A0 body {</div><div dir=3D"auto">=C2=A0 =C2=A0 font=
+-family: &#39;Segoe UI&#39;, Tahoma, Geneva, Verdana, sans-serif;</div><div=
+ dir=3D"auto">=C2=A0 =C2=A0 display: flex;</div><div dir=3D"auto">=C2=A0 =
+=C2=A0 flex-direction: column;</div><div dir=3D"auto">=C2=A0 =C2=A0 align-i=
+tems: center;</div><div dir=3D"auto">=C2=A0 =C2=A0 margin-top: 50px;</div><=
+div dir=3D"auto">=C2=A0 =C2=A0 background: #f0f8ff;</div><div dir=3D"auto">=
+=C2=A0 }</div><div dir=3D"auto">=C2=A0 h1 {</div><div dir=3D"auto">=C2=A0 =
+=C2=A0 margin-bottom: 20px;</div><div dir=3D"auto">=C2=A0 }</div><div dir=
+=3D"auto">=C2=A0 .board {</div><div dir=3D"auto">=C2=A0 =C2=A0 display: gri=
+d;</div><div dir=3D"auto">=C2=A0 =C2=A0 grid-template-columns: repeat(3, 10=
+0px);</div><div dir=3D"auto">=C2=A0 =C2=A0 grid-template-rows: repeat(3, 10=
+0px);</div><div dir=3D"auto">=C2=A0 =C2=A0 gap: 5px;</div><div dir=3D"auto"=
+>=C2=A0 }</div><div dir=3D"auto">=C2=A0 .cell {</div><div dir=3D"auto">=C2=
+=A0 =C2=A0 background: #eee;</div><div dir=3D"auto">=C2=A0 =C2=A0 border-ra=
+dius: 10px;</div><div dir=3D"auto">=C2=A0 =C2=A0 display: flex;</div><div d=
+ir=3D"auto">=C2=A0 =C2=A0 justify-content: center;</div><div dir=3D"auto">=
+=C2=A0 =C2=A0 align-items: center;</div><div dir=3D"auto">=C2=A0 =C2=A0 fon=
+t-size: 3rem;</div><div dir=3D"auto">=C2=A0 =C2=A0 cursor: pointer;</div><d=
+iv dir=3D"auto">=C2=A0 =C2=A0 transition: background-color 0.3s;</div><div =
+dir=3D"auto">=C2=A0 }</div><div dir=3D"auto">=C2=A0 .cell:hover {</div><div=
+ dir=3D"auto">=C2=A0 =C2=A0 background-color: #d1e7f9;</div><div dir=3D"aut=
+o">=C2=A0 }</div><div dir=3D"auto">=C2=A0 .status {</div><div dir=3D"auto">=
+=C2=A0 =C2=A0 margin-top: 20px;</div><div dir=3D"auto">=C2=A0 =C2=A0 font-s=
+ize: 1.2rem;</div><div dir=3D"auto">=C2=A0 }</div><div dir=3D"auto">=C2=A0 =
+button {</div><div dir=3D"auto">=C2=A0 =C2=A0 margin-top: 20px;</div><div d=
+ir=3D"auto">=C2=A0 =C2=A0 padding: 10px 20px;</div><div dir=3D"auto">=C2=A0=
+ =C2=A0 font-size: 1rem;</div><div dir=3D"auto">=C2=A0 =C2=A0 cursor: point=
+er;</div><div dir=3D"auto">=C2=A0 }</div><div dir=3D"auto">&lt;/style&gt;</=
+div><div dir=3D"auto">&lt;/head&gt;</div><div dir=3D"auto">&lt;body&gt;</di=
+v><div dir=3D"auto"><br></div><div dir=3D"auto">&lt;h1&gt;Tic-Tac-Toe&lt;/h=
+1&gt;</div><div dir=3D"auto">&lt;div class=3D&quot;board&quot; id=3D&quot;b=
+oard&quot;&gt;</div><div dir=3D"auto">=C2=A0 &lt;div class=3D&quot;cell&quo=
+t; data-index=3D&quot;0&quot;&gt;&lt;/div&gt;</div><div dir=3D"auto">=C2=A0=
+ &lt;div class=3D&quot;cell&quot; data-index=3D&quot;1&quot;&gt;&lt;/div&gt=
+;</div><div dir=3D"auto">=C2=A0 &lt;div class=3D&quot;cell&quot; data-index=
+=3D&quot;2&quot;&gt;&lt;/div&gt;</div><div dir=3D"auto">=C2=A0 &lt;div clas=
+s=3D&quot;cell&quot; data-index=3D&quot;3&quot;&gt;&lt;/div&gt;</div><div d=
+ir=3D"auto">=C2=A0 &lt;div class=3D&quot;cell&quot; data-index=3D&quot;4&qu=
+ot;&gt;&lt;/div&gt;</div><div dir=3D"auto">=C2=A0 &lt;div class=3D&quot;cel=
+l&quot; data-index=3D&quot;5&quot;&gt;&lt;/div&gt;</div><div dir=3D"auto">=
+=C2=A0 &lt;div class=3D&quot;cell&quot; data-index=3D&quot;6&quot;&gt;&lt;/=
+div&gt;</div><div dir=3D"auto">=C2=A0 &lt;div class=3D&quot;cell&quot; data=
+-index=3D&quot;7&quot;&gt;&lt;/div&gt;</div><div dir=3D"auto">=C2=A0 &lt;di=
+v class=3D&quot;cell&quot; data-index=3D&quot;8&quot;&gt;&lt;/div&gt;</div>=
+<div dir=3D"auto">&lt;/div&gt;</div><div dir=3D"auto"><br></div><div dir=3D=
+"auto">&lt;div class=3D&quot;status&quot; id=3D&quot;status&quot;&gt;Player=
+ X&#39;s turn&lt;/div&gt;</div><div dir=3D"auto">&lt;button id=3D&quot;rese=
+tBtn&quot;&gt;Restart Game&lt;/button&gt;</div><div dir=3D"auto"><br></div>=
+<div dir=3D"auto">&lt;script&gt;</div><div dir=3D"auto">=C2=A0 const board =
+=3D document.getElementById(&#39;board&#39;);</div><div dir=3D"auto">=C2=A0=
+ const cells =3D board.querySelectorAll(&#39;.cell&#39;);</div><div dir=3D"=
+auto">=C2=A0 const status =3D document.getElementById(&#39;status&#39;);</d=
+iv><div dir=3D"auto">=C2=A0 const resetBtn =3D document.getElementById(&#39=
+;resetBtn&#39;);</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =
+let currentPlayer =3D &#39;X&#39;;</div><div dir=3D"auto">=C2=A0 let gameSt=
+ate =3D [&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quo=
+t;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;];</div><div dir=
+=3D"auto">=C2=A0 let gameActive =3D true;</div><div dir=3D"auto"><br></div>=
+<div dir=3D"auto">=C2=A0=C2=A0</div><div dir=3D"auto"><br></div></div></div=
+></div></div>
+
+--000000000000d9fdfc0636919584--
